@@ -1,0 +1,255 @@
+$default: #007FFF
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    outline: none
+    body
+        font-family: Gilroy
+        .bg_active
+            background-color: #9F9FA5FF!important
+            backdrop-filter: blur(4px)!important
+        .dashboard
+            display: flex
+            justify-content: center
+            padding: 24px
+            position: relative
+            min-height: 100vh
+            background-color: #f0f0ff
+            .wrapper
+                .headers
+                    .tabBlue
+                        color: $default!important
+                    .tabWhite
+                        color: #979797!important
+                    .heading
+                        display: flex
+                        justify-content: flex-start
+                        align-items: center
+                        grid-gap: 20px
+                        flex-wrap: wrap
+                        h1
+                            font-size: 48px
+                            font-weight: 600
+                        button
+                            width: 180px
+                            height: 40px
+                            font-family: inherit
+                            border-radius: 10px
+                            color: #fff
+                            background-color: $default
+                            cursor: pointer
+                            border: 1px solid $default
+                    .subheading
+                        display: flex
+                        justify-content: flex-start
+                        align-items: center
+                        grid-gap: 10px
+                        margin-top: 30px
+                        span
+                            font-style: 14px
+                            font-weight: 600
+                        p
+                            font-style: 14px
+                            font-weight: 700
+                            cursor: pointer
+                        .tile
+                            color: #979797
+                            font-weight: 600
+                        .table
+                            color: $default
+                .bar_active
+                    .title
+                        display: none!important
+                    .taskbar
+                        display: grid!important
+                        grid-template-columns: repeat(3,1fr)
+                        grid-gap: 15px
+                        .ItemActive
+                            background-color: #b8b8b8!important
+                            border: 1px solid #b8b8b8!important
+                        .item
+                            width: 370px
+                            height: 220px
+                            border: 1px solid #d8d8d8
+                            border-radius: 10px
+                            background-color: #fff
+                            display: flex
+                            align-items: flex-start!important
+                            flex-direction: column
+                            padding: 20px!important
+                            transition: 300ms ease
+                            &:hover
+                                cursor: pointer
+                                transform: scale(1.045)
+                                box-shadow: 1px 1px 0px 1px #999999
+                            .task_block_1
+                                display: flex
+                                align-items: flex-start
+                                flex-direction: column
+                                grid-gap: 20px
+                                width: 100%
+                                .heading
+                                    font-size: 20px
+                                    font-weight: 600
+                                    width: 100%
+                                .info
+                                    font-size: 14px
+                                    color: #a5a5b4
+                            .task_block_2
+                                display: flex
+                                justify-content: flex-start
+                                align-items: flex-start
+                                width: 100%
+                                .Check_Up
+                                    display: none!important
+                            .tile_Up
+                                display: block!important
+                            .isRed
+                                color: #FF3F3F
+                            .isBlue
+                                color: $default
+                .table_bar
+                    margin-top: 30px
+                    .title
+                        display: flex
+                        justify-content: space-between
+                        align-items: center
+                        border-bottom: 1.7px solid #949494
+                        padding: 10px 0
+                        span
+                            font-weight: 600
+                            font-size: 15px
+                            line-height: 17px
+                            color: #a1a1a1
+                    .taskbar
+                        .item
+                            display: flex
+                            justify-content: space-between
+                            align-items: center
+                            border-bottom: 1.7px solid #949494
+                            padding: 10px 0
+                            min-height: 70px
+                            transition: 300ms ease
+                            &:hover
+                                cursor: pointer
+                                box-shadow: 1px 1px 0px 1px #999999
+                            .heading
+                                width: 192px
+                    .title_block_1
+                        display: flex
+                        justify-content: space-between
+                        align-items: center
+                        grid-gap: 20px
+                        width: 416px
+                    .title_block_2
+                        display: flex
+                        justify-content: space-between
+                        align-items: flex-start
+                        grid-gap: 20px
+                        width: 490px
+                        .time
+                            text-align: right
+                            width: 60px
+                    .task_block_1
+                        display: flex
+                        justify-content: flex-start
+                        align-items: center
+                        grid-gap: 95px
+                        width: 800px
+                        .info
+                            max-width: 58ch
+                    .task_block_2
+                        display: flex
+                        justify-content: space-between
+                        align-items: flex-start
+                        grid-gap: 20px
+                        width: 495px
+                        .date
+                            width: 78px
+                        .Check_Up
+                            color: #000
+                            width: 100px
+                            text-align: right
+                        .time
+                            width: 32px
+                            text-align: center
+                        .isRed
+                            width: 100px
+                            color: #FF3F3F
+                            text-align: right
+                        .isBlue
+                            width: 100px
+                            color: $default
+                            text-align: right
+                    .tile_Up
+                        display: none
+                    p
+                        font-weight: 600
+                        font-size: 14px
+                        line-height: 17px
+                .modal,.modal-edit
+                    position: absolute
+                    left: 50%
+                    top: 55%
+                    background: #fff
+                    padding: 24px
+                    border-radius: 24px
+                    transform: translate(-50%, -50%)
+                    border: 1px solid silver
+                    width: 480px
+                    height: 480px
+                    display: flex
+                    justify-content: center
+                    transition: opacity .3s
+                    transition: .3s ease
+                    opacity: 0
+                    z-index: -2
+                .active
+                    transition: .3s ease
+                    opacity: 1
+                    z-index: 2
+                    form
+                        display: flex
+                        flex-direction: column
+                        justify-content: center
+                        align-items: flex-start
+                        grid-gap: 15px
+                        text-align: left
+                        img
+                            position: absolute
+                            top: 15px
+                            right: 20px
+                            cursor: pointer
+                        h2
+                            font-weight: 700
+                            font-size: 42px
+                            margin-bottom: 20px
+                        input,select
+                            width: 330px
+                            height: 42px
+                            border-radius: 8px
+                            border: 1px solid #000
+                            padding: 5px
+                            font-family: inherit
+                            color: #000
+                            font-weight: 600
+                        input::placeholder
+                            color: #000
+                            font-weight: 600
+                            font-size: 15px
+                        button
+                            width: 330px
+                            height: 42px
+                            border-radius: 8px
+                            border: 1px solid $default
+                            font-family: inherit
+                            color: #fff
+                            font-weight: 600
+                            background-color: $default
+                            cursor: pointer
+                            font-size: 16px
+                        h3
+                            display: none
+                            font-size: 15px
+                            color: #FF3F3F
