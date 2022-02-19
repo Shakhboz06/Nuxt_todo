@@ -46,7 +46,9 @@ export default () => new Vuex.Store({
         h3.style.display = "block"
       } else {
         h3.style.display = "none"
+        obj.date = `${obj.date.slice(8,10)}.${obj.date.slice(5,7)}.${obj.date.slice(0,4)}`
         state.data.push(obj)
+        console.log(state.data)
       }
     }
   },
